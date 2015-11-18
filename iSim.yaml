@@ -68,21 +68,21 @@ instances:
     <<: *appRO
   
   ltmWebGL1: 
-    <<: &t_ltm
+    <<: *t_ltm
     dataCenter: GL
     pool:
       - winAppSrvGL1
       - winAppSrvGL2
     
   ltmWebRO1: 
-    <<: &t_ltm
+    <<: *t_ltm
     dataCenter: RO
     pool:
       - winAppSrvRO1
       - winAppSrvRO2
   
   gtmWeb1:
-    <<: &t_gtm
+    <<: *t_gtm
     domainName: REPLACE.igslb.allstate.com
     pool:
       - ltmWebGl1
