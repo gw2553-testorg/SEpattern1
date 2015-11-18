@@ -54,17 +54,15 @@ instances:
   winAppSrvGL1: &appGL
     <<: *t_webAppServer
     dataCenter : GL
-    maintWin: 
-      <<: *t_maint_A
-
+    maintWin: *t_maint_A
+     
   winAppSrvGL2: 
     <<: *appGL
     
   winAppSrvRO1: &appRO
     <<: *t_webAppServer
     dataCenter : RO
-    maintWin: 
-      <<: *t_maint_B
+    maintWin: *t_maint_B
     
   winAppSrvRO2: 
     <<: *appRO
