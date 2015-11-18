@@ -40,7 +40,7 @@ template:
     SMStype: prod        # [ prod, staging, earlyAdopter, preprod, test ]
     
   webAppServer: &t_webAppServer
-    <<: &t_common_app
+    <<: *t_common_app
     eSHS: is_server_windows_vm
     size: '2/8'                # [ 2/2 2/4 2/6 2/8 2/16 4/8 4/16 4/24]
     function: APP            # [ APP | DBS | WEB | etc... ] - (Defatult APP)
@@ -52,7 +52,8 @@ instances:
   winAppSrvGL1: &appGL
     <<: *t_webAppServer
     dataCenter : GL
-    maintWin: *t_maint_A
+    maintWin: 
+      <<: *t_maint_A
 
   winAppSrvGL2: 
     <<: *appGL
@@ -60,7 +61,8 @@ instances:
   winAppSrvRO1: &appRO
     <<: *t_webAppServer
     dataCenter : RO
-    maintWin: *t_maint_B
+    maintWin: 
+      <<: *t_maint_B
     
   winAppSrvRO2: 
     <<: *appRO
