@@ -85,7 +85,7 @@ instances:
     <<: *t_gtm
     domainName: REPLACE.igslb.allstate.com
     pool:
-      - ltmWebGl1
-      - ltmWebRo1
+      - ltmWebGL1
+      - ltmWebRO1
       
     
