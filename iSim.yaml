@@ -32,13 +32,13 @@ template:
   maintWindowA: 
     maintWindow: &t_mwA
       day: sat            #[mon,tue,wed,thu,fri,sat,sun]
-      window: 0600          #[0200|0600|1000|1400|1800|2200] 
+      window: '0600'          #[0200|0600|1000|1400|1800|2200] 
       SMStype: prod        # [ prod, staging, earlyAdopter, preprod, test ]
     
   maintWindowB: 
     maintWindow: &t_mwB
       day: sun            #[mon,tue,wed,thu,fri,sat,sun]
-      window: 0600          #[0200|0600|1000|1400|1800|2200] 
+      window: '0600'          #[0200|0600|1000|1400|1800|2200] 
       SMStype: prod        # [ prod, staging, earlyAdopter, preprod, test ]
     
   webAppServer: &t_webAppServer
