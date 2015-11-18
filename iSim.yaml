@@ -29,15 +29,17 @@ template:
     priContact: REPLACE             # [email contact group] 
     secContact: REPLACE             # [email contact group]
     
-  maintWindows: &t_maint_A
-    day: sat            #[mon,tue,wed,thu,fri,sat,sun]
-    window: 0600          #[0200|0600|1000|1400|1800|2200] 
-    SMStype: prod        # [ prod, staging, earlyAdopter, preprod, test ]
+  maintWindowA: 
+    maintWindow: &t_maint_A
+      day: sat            #[mon,tue,wed,thu,fri,sat,sun]
+      window: 0600          #[0200|0600|1000|1400|1800|2200] 
+      SMStype: prod        # [ prod, staging, earlyAdopter, preprod, test ]
     
-  maintWindows: &t_maint_B
-    day: sun            #[mon,tue,wed,thu,fri,sat,sun]
-    window: 0600          #[0200|0600|1000|1400|1800|2200] 
-    SMStype: prod        # [ prod, staging, earlyAdopter, preprod, test ]
+  maintWindowB: 
+    maintWindow: &t_maint_B
+      day: sun            #[mon,tue,wed,thu,fri,sat,sun]
+      window: 0600          #[0200|0600|1000|1400|1800|2200] 
+      SMStype: prod        # [ prod, staging, earlyAdopter, preprod, test ]
     
   webAppServer: &t_webAppServer
     <<: *t_common_app
